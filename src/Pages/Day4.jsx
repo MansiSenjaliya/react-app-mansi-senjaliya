@@ -3,9 +3,10 @@ import React from "react";
 class Day4 extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { users: [] };
+    this.state = { users: [] , loading: true};
   }
   componentDidMount() {
+     this.setState({ loading: false });
     setTimeout(() => this.getUsers(), 1000 * 3);
   }
 
