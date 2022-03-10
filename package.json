@@ -1,6 +1,7 @@
 {
   "name": "day1",
   "version": "0.1.0",
+  "homepage": "https://MansiSenjaliya.github.io/react-app-mansi-senjaliya",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
@@ -8,11 +9,13 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+    "react-js-loader": "^0.1.0",
+    "react-loader-spinner": "^6.0.0-0",
     "react-scripts": "5.0.0",
+    "rsuite": "^5.6.3",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "homepage": "https://github.com/MansiSenjaliya/react-app-mansi-senjaliya.git",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
