@@ -3,7 +3,6 @@ import React from 'react';
 export default class List extends React.Component {
   constructor() {
     super();
-
     this.state = {
       users: [],
     };
@@ -14,13 +13,14 @@ export default class List extends React.Component {
   }
 
   getUsers() {
-    fetch('https://reqres.in/api/users?page=2')
+    fetch('https://reqres.in/api/users?per_page=20')
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
         this.setState({
           users: json.data,
         });
+        console.log(json);
       })
 
       .catch((err) => {
@@ -53,7 +53,7 @@ export default class List extends React.Component {
                   <td>{user.first_name}</td>
                   <td>{user.last_name}</td>
                   <td>
-                    <img src={user.avatar} alt="avatar" />
+                    <img src={user.avatar} alt="profile_image" />
                   </td>
                 </tr>
               ))

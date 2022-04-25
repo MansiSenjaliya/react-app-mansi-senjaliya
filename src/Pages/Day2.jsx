@@ -1,29 +1,23 @@
-import React from "react";
-import { User } from "../Components/Day2User";
-class Day2 extends React.Component {
+import React from 'react';
+import User from '../components/User';
+
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
       details: {
-        firstName: "Mansi",
-        lastName: "Senjaliya",
-        email: "mansi@gmail.com",
-        password: "123@xyz",
-        city: "Rajkot",
-        state: "Gujarat",
-        country: "India",
-        age: "20",
-        company: "The One Technology",
-        phoneNumber: "9090909090",
+        firstName: 'Mansi',
+        lastName: 'Senjaliya',
+        city: 'Ahmedabad',
+        state: 'Gujarat',
+        country: 'India',
       },
     };
   }
+
   render() {
-    return (
-      <>
-        <User data={this.state.details} />
-      </>
-    );
+    return <User data={this.state.details} />;
   }
 }
-export default Day2;
+
+export default App;

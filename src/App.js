@@ -1,15 +1,18 @@
-import Day2 from "./Pages/Day2";
-import Day3 from "./Pages/Day3";
-import Day4 from "./Pages/Day4";
+import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import Header from './header/head';
+import Footer from './footer/footer';
+import RouteApp from './routeApps/router';
+import store from './pages/Redux/store';
 
-function App() {
-  return (
-    <>
-      {/* <Day2/> */}
-      {/* <Day3 /> */}
-      <Day4 />
-    </>
-  );
-}
-
+const App = () => (
+  <Provider store={store}>
+    <BrowserRouter>
+      <Header />
+      <RouteApp />
+      <Footer />
+    </BrowserRouter>
+  </Provider>
+);
 export default App;
